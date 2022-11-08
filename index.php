@@ -150,11 +150,14 @@
         if ($err) {
         echo "cURL Error #:" . $err;
         } else {
+		echo gettype($response);
             $objeto = json_decode($response);
+		echo gettype($objeto);
             $offersList = $objeto['offers'];
+		echo gettype($offersList);
 
             foreach($offersList as $offer) {
-                echo "Oferta: " . $offer->department;
+                echo "Oferta: " . $offers->department;
             }
         
 
